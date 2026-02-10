@@ -1,3 +1,5 @@
+import computer
+
 class ResaleShop:
     # What attributes will it need?
     inventory: list = []
@@ -9,11 +11,18 @@ class ResaleShop:
         #pass # You'll remove this when you fill out your constructor
 
     # What methods will you need?
-    #def buy_computer(self, item: str)
+    def buy_computer(self, item: computer):
+        self.inventory.append(item)
+        return(self.inventory)
 
+    #def selling_computer(self, inventory: list, item: str)
+
+    #def refurbish_computer(self, inventory: list, item: str)
 
 def main():
     my_store:ResaleShop = ResaleShop(["computer1", "computer2"])
+    print(my_store.inventory)
+    my_store.buy_computer("computer3")
     print(my_store.inventory)
 
 if __name__ == "__main__":
