@@ -18,21 +18,25 @@ class Computer:
         self.price = price
         #pass # You'll remove this when you fill out your constructor
 
+    def __repr__ (self):#Changes how classes are represented to the resale shop.
+        return (f"Description: {self.description} Operating system : {self.operating_system} Year made : {self.year_made} Price : {self.price}.")
+    
     # What methods will you need?
-    def update_price(self, price: int):
+    def update_price(self, price: int): #rewrites price of computer.
         self.price = price
         return price
     
-    def update_os(self, os: str):
+    def update_os(self, os: str): #rewrites os of computer.
         self.operating_system = os
         return os
     
 def main():
     my_computer:Computer = Computer("Windows", "MyOs", 2019, 200)
-    print(my_computer.operating_system)
-    print(my_computer.update_os("MyOs2"))
-    print(my_computer.price)
-    print(my_computer.update_price(400))
+    print(my_computer)
+    my_computer.update_os("MyOs2")
+    print(my_computer)
+    my_computer.update_price(400)
+    print(my_computer)
 
 if __name__ == "__main__":
     main()
