@@ -49,9 +49,8 @@ def main():
     my_store.buy_computer(computer3) 
     print(my_store.inventory)
     my_store.sell_computer(computer3)
-    print(my_store.inventory)
-    my_store.sell_computer(computer3) #Creates error when trying to sell computer 2 times.
     print(my_store.inventory) #Buys then sells computer 3, showing changed inventory.
+    my_store.sell_computer(computer3) #Creates error when trying to sell computer 2 times.
     my_store.refurbish_computer(computer3, "Windows 11") #Shows error message.
     my_store.refurbish_computer(computer1, "Windows 11") #Shows new refurbished price and os.
     print(my_store.inventory)
