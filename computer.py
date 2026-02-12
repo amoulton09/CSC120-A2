@@ -1,41 +1,36 @@
 class Computer:
-    # What attributes will it need?
+    #Attributes of computer class:
+
     description: str = ""
-    #processor_type: str = ""
-    #hard_drive_capacity: int = 0
-    #memory: int = 0
     operating_system: str = ""
     year_made: int = 0
     price: int = 0
 
-
-    # How will you set up your constructor?
-    # Remember: in python, all constructors have the same name (__init__)
-    def __init__(self, description: str, operating_system: str, year_made: int, price: int):
+    def __init__(self, description: str, operating_system: str, year_made: int, price: int): #Constructor that creates a computer object with all attributes listed.
         self.description = description
         self.operating_system = operating_system
         self.year_made = year_made
         self.price = price
-        #pass # You'll remove this when you fill out your constructor
 
-    def __repr__ (self):#Changes how classes are represented to the resale shop.
-        return (f"Description: {self.description} Operating system : {self.operating_system} Year made : {self.year_made} Price : {self.price}.")
+    def __repr__ (self): #Changes how objects of the computer class classes are represented to the resale shop when imported.
+        return (f"Description: {self.description} Operating system : {self.operating_system} Year made : {self.year_made} Price : {self.price}.\n")
     
-    # What methods will you need?
-    def update_price(self, price: int): #rewrites price of computer.
+    #Methods of computer class:
+
+    def update_price(self, price: int): #Rewrites price of computer.
         self.price = price
         return price
     
-    def update_os(self, os: str): #rewrites os of computer.
+    def update_os(self, os: str): #Rewrites os of computer.
         self.operating_system = os
         return os
     
 def main():
-    my_computer:Computer = Computer("Windows", "MyOs", 2019, 200)
+    my_computer:Computer = Computer("Black Windows Machine", "Windows 10", 2019, 450) #Creates basic computer object
     print(my_computer)
-    my_computer.update_os("MyOs2")
+    my_computer.update_os("Windows 11") #Changes operating system
     print(my_computer)
-    my_computer.update_price(400)
+    my_computer.update_price(400) #Changes price
     print(my_computer)
 
 if __name__ == "__main__":
